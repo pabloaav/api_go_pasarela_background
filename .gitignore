@@ -1,0 +1,6 @@
+
+internal/config/env.go
+/docker-compose.yml
+/dockerfile
+
+/retenciones/*

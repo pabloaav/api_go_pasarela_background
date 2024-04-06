@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mensaje de control de reportes de Wee.ar!</title>
+  </head>
+
+  <body style="width: 90%; margin-left: auto; margin-right: auto">
+    <tr>
+      <td
+        role="modules-container"
+        style="padding: 0px 0px 0px 0px; color: #353b46; text-align: left"
+        width="100%"
+        bgcolor="#FFFFFF"
+        align="left"
+      >           
+
+        <br/><br/>
+        
+        <table
+          role="module"
+          style="table-layout: fixed"
+          width="100%"
+          cellspacing="0"
+          cellpadding="0"
+          border="0"
+        >
+        
+          <tbody>
+            <tr>
+              <td role="module-content" valign="top" height="100%">
+                <div
+                  style="
+                    margin: 0px 16px;
+                    font-family: inherit;
+                    padding-right: 16px;
+                    padding: 25px 16px;
+                    background-color: #eeeeee;
+                    border-bottom-right-radius: 4px;
+                    border-bottom-left-radius: 4px;
+                    text-align: center;
+                    border-top-right-radius: 4px;
+                    border-top-left-radius: 4px;
+                  "
+                >
+                  <span
+                    style="
+                      font-family: inherit;
+                      color: #00aeda;
+                      font-size: 20px;
+                    "
+                    ><strong>
+                      Detalles de Controles
+                    </strong></span
+                  >
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br/> <br/>
+      
+        <table>
+          <tbody>
+            <tr>                             
+              <th style="width: 10%;">
+                <strong>Control</strong>
+              </th> 
+              <th style="width: 10%;">
+                <strong>Diferencia</strong>
+              </th> 
+              <th style="width: 15%;">
+                <strong>Cobranza</strong>
+              </th> 
+              <th style="width: 15%;">
+                <strong>Cobranza Cliente</strong>
+              </th> 
+              <th style="width: 10%;">
+                <strong>N° Cuenta</strong>
+              </th>  
+              <th style="width: 35%;">
+                <strong>Cuenta</strong>
+              </th>                     
+                                 
+          </tr>            
+            
+            {{range .Datos}}
+            <tr>                             
+                  <td >
+                    {{.Estado}}
+                  </td>  
+                  <td >
+                    {{.Diferencia}}
+                  </td>  
+                  <td >
+                    {{.MontoCobranza}}
+                  </td>  
+                  <td >
+                    {{.MontoCobranzaCliente}}
+                  </td>  
+                  <td >
+                    {{.CuentaId}}
+                  </td>  
+                  <td >
+                    {{.Cuenta}}
+                  </td>  
+                                     
+            </tr>            
+            {{end}}
+          </tbody>
+        </table>
+        <br /><br />
+      
+      </td>
+    </tr>
+  </body>
+</html>
